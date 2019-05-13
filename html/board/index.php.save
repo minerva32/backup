@@ -1,0 +1,58 @@
+﻿<?php
+' href='https://fonts.googleapis.com/css?family=Lato'>";
+echo"<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/fon$
+echo"</head>";
+session_start();
+
+echo "<html xmlns='http://www.w3.org/1999/html'>";
+echo"<head>";
+echo"<meta charset='UTF-8'>";
+echo"<title>코난과 함께하는 세상</title>";
+
+	
+echo"<meta name='viewport' content='width=device-width, initial-scale=1'>";
+echo"<link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>";
+echo"<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>";
+echo"<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>";
+echo"</head>";
+echo"<body oncontextmenu='return false' topmargin='0' ondragstart='return false' onselectstart='return false' style='background-image:url('image/background.png');'>";
+
+echo"<!-- Navbar -->";
+
+if(!isset($_SESSION['id']))
+{
+echo"<div class='w3-top'>";
+echo"<a href='regist.php' class='w3-bar-item w3-button w3-padding-large w3-hide-small w3-right'><i class='fa fa-user-plus'></i> 가입</a>";
+echo"<a href='login.php' class='w3-bar-item w3-button w3-padding-large w3-hide-small w3-right'><i class='fa fa-sign-in'></i> 로그인</a>";
+echo"</div>";
+
+} else {
+$uid=$_SESSION['id'];
+echo"<div class='w3-top'>";
+echo"<a href='#' class='w3-bar-item w3-button w3-padding-large w3-hide-small w3-right'><i class='fa fa-user-plus'></i> 마이페이지</a>";
+echo"<a href='#' class='w3-bar-item w3-button w3-padding-large w3-hide-small w3-right'><i class='fa fa-sign-in'></i> 로그아웃</a>";
+echo"</div>";
+}
+?>
+<!doctype html>
+<html>
+<body>
+<header class="w3-panel w3-center" style="padding:0px 16px">
+	  <a href="./Main2.php"><img src="image/header.png"></a>
+</header>
+	<div class="w3-panel w3-center">
+		<div class="w3-bar w3-border ">
+				<a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-home"></i> 메인</a>
+			<div class="w3-dropdown-hover">
+			  <a href="#" class="w3-button w3-light-grey"><i class="fa fa-users"></i> 코난토론장 <i class="fa fa-caret-down"></i></a>     
+			  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="/php/List.php" class="w3-bar-item w3-button">자유게시판</a>
+			  </div>
+			</div>
+		  <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-map-o"></i> 오시는 길</a>
+		  <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-shopping-bag"></i> 코난 굳즈 판매방</a>
+		</div>
+	</div>
+
+</body>
+</html>
